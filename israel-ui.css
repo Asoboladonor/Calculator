@@ -1,0 +1,274 @@
+/*CRAFTED BY ASOBOLA DONOR*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter","Roboto",sans-serif;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+}
+
+.display {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.display input[type="text"] {
+    width: 100%;
+    height: 300px;
+    background-color: #111111;
+    color: #ffffff;
+    font-size: 50px;
+    text-align: right;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #2f2f31;
+    padding: 15px;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.buttons button {
+    height: 60px;
+    background-color: #2f2f31;
+    color: #fff;
+    font-family: "Inter","Roboto",sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.buttons button:active{
+    background-color: #554;
+}
+
+.buttons button#equals {
+    grid-row: span 2;
+    background-color: #4285f4;
+    color: #ffffff;
+    height: 90%;
+    width: ;
+}
+
+.buttons button#op,#clear,#delete {
+    color: #4285f4;
+    font-size: 30px;
+}
+/* CRAFTED BY ASOBOLA DONOR */
+/* bs  */
+/* Branding button */
+.brand-btn {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 1s ease;
+  z-index: 1000;
+  font-size: 1.0rem;
+  animation: glideToCorner 1.8s cubic-bezier;
+}
+
+/* Move and shrink to top-right */
+.brand-btn.moved {
+  top: 10px;
+  right: 2px;
+  left: auto;
+  transform: scale(0.4);
+  border-radius: 20px;
+  padding: 10px;
+  animation: float 2s ease-in-out infinite alternate; /* Floating effect */
+  margin-bottom: 0;
+}
+
+/* Floating/bouncing effect */
+@keyframes float {
+  0% { 
+    transform: 
+      scale(0.4) 
+      translateY(0) 
+      translateX(0) 
+      rotate(0deg); 
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25));
+  }
+
+  20% {
+    transform: 
+      scale(0.405) 
+      translateY(-3px) 
+      translateX(-1px) 
+      rotate(-2deg);
+  }
+
+  50% { 
+    transform: 
+      scale(0.4) 
+      translateY(-7px) 
+      translateX(1.5px) 
+      rotate(2deg); 
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
+  }
+
+  80% {
+    transform: 
+      scale(0.395) 
+      translateY(-3px) 
+      translateX(-1px) 
+      rotate(-1deg);
+  }
+
+  100% { 
+    transform: 
+      scale(0.4) 
+      translateY(0) 
+      translateX(0) 
+      rotate(0deg);
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25));
+  }
+}
+
+
+@keyframes glideToCorner {
+  0% {
+    transform:
+      translate(-50%, -50%)     /* centered */
+      scale(1)
+      rotate(0deg);
+    opacity: 1;
+  }
+
+  10% {
+    transform:
+      translate(-50%, -65%)     /* tiny upward lift */
+      scale(1.05)
+      rotate(-3deg);
+  }
+
+  35% {
+    transform:
+      translate(5vw, -30vh)     /* begin arcing right */
+      scale(0.9)
+      rotate(3deg);
+  }
+
+  65% {
+    transform:
+      translate(20vw, -42vh)    /* sweeping curve */
+      scale(0.8)
+      rotate(-2deg);
+  }
+
+  85% {
+    transform:
+      translate(32vw, -47vh)    /* approaching corner */
+      scale(0.72)
+      rotate(1deg);
+  }
+
+  100% {
+    transform:
+      translate(45vw, -50vh)    /* final small icon top-right */
+      scale(0.68)
+      rotate(0deg);
+  }
+}
+
+/* Cute landing bounce */
+@keyframes cornerBounce {
+  0% {
+    transform: translate(45vw, -50vh) scale(0.68);
+  }
+  50% {
+    transform: translate(45vw, -52vh) scale(0.70);
+  }
+  100% {
+    transform: translate(45vw, -50vh) scale(0.68);
+  }
+}
+
+/* Apply with:
+   animation: glideToCorner 1.8s cubic-bezier(.17,.67,.48,1) forwards,
+              cornerBounce 1.6s ease-in-out infinite 1.8s alternate;
+*/
+/* Contact widget */
+.contact-widget {
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  background: #444;
+  padding: 10px;
+  border-radius: 12px;
+  display: none; /* Hidden by default */
+  z-index: 999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.contact-widget a {
+  display: block;
+  color: #fff;
+  margin: 5px 0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: inter;
+}
+
+.contact-widget a:hover {
+  color: #4285f4;
+}
+
+.contact-widget a:active {
+    color: #4285f4;
+} 
+/* Ghost Banner */
+#ghost-banner {
+    position: fixed;
+    top: 150px;
+    left: 110px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    padding: 6px 7px;
+    border-radius: 12px;
+    font-size: 0.5rem;
+    color: #ffffffaa;
+    letter-spacing: 0.5px;
+    z-index: 99999;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.8s ease;
+    pointer-events: none;
+    text-align: center;
+}
